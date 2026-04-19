@@ -36,11 +36,6 @@ The relevant files follow this path pattern:
 fileRef(Archive-ElementsPDG)/**/PlanEval*/**/*.dcm
 ```
 
-In practice (Windows UNC path example):
-```
-\\<PlanningServer>\Archive-ElementsPDG\<Patient>\PlanEval_<PlanName>\<date>\*.dcm
-```
-
 Copy or map the archive root to a local/network folder and pass it as `--dicom`. The scripts walk all subdirectories recursively, so pointing them at the archive root is sufficient.
 
 ### PDF – Treatment Reports (TreatPar)
