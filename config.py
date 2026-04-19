@@ -64,6 +64,5 @@ MARGIN_THRESHOLD_MM = 6.0
 # Maximale Anzahl von Zeilen die als "alte" Version gelten (v1.5 hat weniger Zeilen)
 PDF_V15_MAX_LINES = 50
 
-# Fallback Dosis-Werte wenn nicht im PDF gefunden
-FALLBACK_DOSE_GY = 24.0
-FALLBACK_FRACTIONS = 1
+# Hinweis: Keine Fallback-Dosis oder Fallback-Fractions hinterlegt,
+# da dies die Daten verfälschen würde. Fehlende Werte bleiben leer (None).
