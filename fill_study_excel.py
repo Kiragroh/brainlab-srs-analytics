@@ -320,11 +320,17 @@ def _empty_row():
 
 
 def make_plan_row(p: dict) -> dict:
-    """Erstellt die Plan-Zeile (klinische Felder leer, nur Brainlab-Info)."""
+    """Erstellt die Plan-Zeile (klinische Felder leer, nur Brainlab-Info).
+    Verträgt sowohl PDF-Dicts (plan_name, patient_name) als auch
+    DICOM-Dicts (cbl_name, patient_id unterschiedlich benannt).
+    """
     row = _empty_row()
-    row["*Plan"]         = p["plan_name"]
+    plan_name = p.get("plan_name") or p.get("cbl_name", "")
+    pat_name  = p.get("patient_name") or p.get("patient_id", "")
+    pat_id    = p.get("patient_id", "")
+    row["*Plan"]         = plan_name
     row["*Approvaldate"] = _parse_date(p.get("creation_date", ""))
-    row["*Kommentare"]   = f"[auto] {p['patient_name']} | ID={p['patient_id']}"
+    row["*Kommentare"]   = f"[auto] {pat_name} | ID={pat_id}" if pat_name or pat_id else "[auto]"
     return row
 
 
@@ -502,12 +508,7 @@ def main():
         print(f"Quelle: DICOM  ({dicom_dir})")
         plans = load_dicom_plans(dicom_dir, debug=False)
         for p in tqdm(plans, desc="Verarbeite Pläne"):
-            all_rows.append(make_plan_row({
-                "plan_name": p.get("cbl_name", ""),
-                "creation_date": p.get("creation_date", ""),
-                "fractions": p.get("fractions"),
-                "app_version": p.get("application_version", ""),
-            }))
+            all_rows.append(make_plan_row(p))
             all_rows.extend(make_met_rows_dicom(p))
         summary = (
             "  TotalDose  = Prescribed Dose [Gy]               (aus DICOM)\n"
