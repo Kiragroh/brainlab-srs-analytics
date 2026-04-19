@@ -19,6 +19,8 @@ Supports three data sources – use what you have:
 | **PDF only** | Brainlab Elements Treatment Reports — **TreatPar** variant (`.pdf`) |
 | **DICOM + PDF** | Both – DICOM is preferred, PDF fills gaps |
 
+> ⚠️ **Disclaimer:** Dies ist **keine offizielle Brainlab-Software**. Dieses Repository wurde von einem Anwender (Radio-Onkologie) entwickelt, um planungsinterne Auswertungen zu erleichtern. Es besteht keine Verbindung zu Brainlab AG, und Brainlab bietet dafür keinen Support. Nutzung auf eigene Verantwortung.
+
 > **Data privacy:** All patient data, DICOM files, PDFs, CSVs and Excel outputs are excluded from this repository via `.gitignore`. You must provide your own source files.
 
 ---
@@ -237,20 +239,33 @@ One row per target volume with matched GTV.
 
 `PTVname` · `PTVvolume_cc` · `GTVname` · `GTVvolume_cc` · `Margin_mm` · `Margin_mm_int`
 
-> GTV matching requires GTV structures to be present in the DICOM and to follow the **P→G naming convention** (e.g. `P1_met` → `G1_met`). Margin is estimated assuming perfect spheres for both volumes.
+> **GTV sources:**
+> - **DICOM:** Direct volume from structure set + P→G naming convention matching
+> - **PDF:** GTV volumes from OTHERS table (when present), otherwise P→G naming fallback
+> 
+> **P→G naming convention:** e.g. `PTV01` → `GTV01`. Margin is estimated assuming perfect spheres for both volumes.
 
 ---
 
 ## OAR Pattern Matching
 
-Configured via `OAR_STRUCTURE_TARGETS` at the top of `enrich_bestrahlungsdaten.py` and `OAR_STRUCTURE_TARGETS_PDF` in `parse_pdf_reports.py`:
+All OAR patterns are now centralized in **`config.py`**:
 
-| Structure | Matched patterns |
-|-----------|-----------------|
+```python
+OAR_PATTERNS = {
+    "Chiasm":    ["chiasm", "chiasma", "chiasm oar", "chiasma oar"],
+    "Brainstem": ["brainstem", "brainstem oar", "hirnstamm", "hirnstamm oar", "brain stem"],
+    # Additional structures can be enabled here:
+    # "OpticNerveL": ["nopticusl", "opticusl", "opticus l", ...],
+}
+```
+
+Changes to `config.py` affect **both** DICOM and PDF parsers automatically. No need to edit multiple files anymore.
+
+| Structure | Matched patterns (default) |
+|-----------|---------------------------|
 | **Chiasm** | chiasm, chiasma, chiasm oar, chiasma oar |
-| **Brainstem** | brainstem, brainstem oar, hirnstamm, hirnstamm oar, brain stem, truncus |
-
-Additional structures (OpticNerve L/R, Cochlea, Myelon, Pituitary) are commented out and can be enabled per line.
+| **Brainstem** | brainstem, brainstem oar, hirnstamm, hirnstamm oar, brain stem |
 
 ---
 
@@ -269,6 +284,7 @@ Set `DEBUG_MODE = True` in the script for a persistent default.
 
 ```
 scripts/
+├── config.py                    # Central configuration (OAR patterns, ID filter, paths)
 ├── create_excel.py              # Standalone export (start here)
 ├── enrich_bestrahlungsdaten.py  # DICOM parser
 ├── parse_pdf_reports.py         # PDF parser (multi-version: 1.5 / 2.0 / 3.x / 4.x)
@@ -278,6 +294,8 @@ scripts/
 ├── README.md
 └── .gitignore
 ```
+
+> **Central config:** `config.py` contains all adjustable parameters (OAR patterns, patient ID digit count, filter modes). Edit this file instead of changing hardcoded values in the parsers.
 
 > Files starting with `_` (e.g. `_test_something.py`) are local helper/test scripts excluded from this repository via `.gitignore`.
 

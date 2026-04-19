@@ -755,17 +755,8 @@ def _enrich_ptv_from_tables(filepath, ptv_map):
 # OAR-Namen matchen
 # ---------------------------------------------------------------------------
 
-# ---------------------------------------------------------------------------
-# KONFIGURATION: OAR-Strukturen für PDF-Analyse (erweiterbar)
-# ---------------------------------------------------------------------------
-OAR_STRUCTURE_TARGETS_PDF = {
-    "Chiasm":    ["chiasm", "chiasma", "chiasm oar", "chiasma oar"],
-    "Brainstem": ["brainstem", "brainstem oar", "hirnstamm", "hirnstamm oar", "brain stem", "truncus"],
-    # "OpticNerveL": ["nopticusl", "opticusl", "opticus l", "opticus li"],
-    # "OpticNerveR": ["nopticusr", "opticusr", "opticus r", "opticus re"],
-    # "Myelon":      ["myelon"],  # Halsmark/Rückenmark (kein Hirnstamm!)
-    # "Cochlea":     ["cochlea"],
-}
+# OAR-Patterns jetzt zentral in config.py – dort pflegen
+from config import OAR_PATTERNS as OAR_STRUCTURE_TARGETS_PDF
 
 CHIASM_PATS    = OAR_STRUCTURE_TARGETS_PDF["Chiasm"]
 BRAINSTEM_PATS = OAR_STRUCTURE_TARGETS_PDF["Brainstem"]

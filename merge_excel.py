@@ -19,7 +19,7 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).parent
 BASE_DIR = SCRIPT_DIR.parent  # Parent für Source-Excel
 
-EXCEL_SOURCE = SCRIPT_DIR / "Bestrahlungsdaten_mit_ICD_Kopf.xlsx"
+EXCEL_SOURCE = SCRIPT_DIR / "Bestrahlungsdaten_mit_ICD.xlsx"
 DICOM_PLAN = SCRIPT_DIR / "dicom_data_plan.csv"
 DICOM_PTV = SCRIPT_DIR / "dicom_data_ptv.csv"
 DICOM_GTV = SCRIPT_DIR / "dicom_data_gtv.csv"

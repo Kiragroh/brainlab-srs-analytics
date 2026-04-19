@@ -514,22 +514,8 @@ def compute_dose_at_volume_cc(dvh_bins, dvh_max_dose_gy, target_volume_cc):
 # 6) OAR-Suche: Chiasm / Brainstem
 # ---------------------------------------------------------------------------
 
-# ---------------------------------------------------------------------------
-# KONFIGURATION: OAR-Strukturen für Analyse (erweiterbar)
-# ---------------------------------------------------------------------------
-# Jeder Eintrag: "AusgabeName": ["pattern1", "pattern2", ...] (case-insensitiv)
-# Die erste zwei Einträge (Chiasm, Brainstem) sind fix verdrahtet.
-# Weitere Strukturen können kommentiert/ergänzt werden.
-OAR_STRUCTURE_TARGETS = {
-    "Chiasm":    ["chiasm", "chiasma", "chiasm oar", "chiasma oar"],
-    "Brainstem": ["brainstem", "brainstem oar", "hirnstamm", "hirnstamm oar", "brain stem", "truncus"],
-    # Weitere Strukturen (Zeile einkommentieren zum Aktivieren):
-    # "OpticNerveL": ["nopticusl", "opticusl", "opticus l", "opticus li", "n opticus l"],
-    # "OpticNerveR": ["nopticusr", "opticusr", "opticus r", "opticus re", "n opticus r"],
-    # "Myelon":      ["myelon"],  # Halsmark/Rückenmark (kein Hirnstamm!)
-    # "Cochlea":     ["cochlea"],
-    # "Pituitary":   ["hypophys", "pituitary", "pituit"],
-}
+# OAR-Patterns jetzt zentral in config.py – dort pflegen
+from config import OAR_PATTERNS as OAR_STRUCTURE_TARGETS
 
 CHIASM_PATTERNS    = OAR_STRUCTURE_TARGETS["Chiasm"]
 BRAINSTEM_PATTERNS = OAR_STRUCTURE_TARGETS["Brainstem"]
