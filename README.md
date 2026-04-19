@@ -189,7 +189,7 @@ Fills a **study-specific Excel template** (`Master_study.xlsx`) from Brainlab so
 Designed for prospective data collection where each row represents one brain metastasis (BM-Stat layout).
 
 ```bash
-# PDF source (default – uses DEFAULT_PDF_DIR)
+# PDF source (default – uses DEFAULT_PDF/DICOM_DIR)
 python fill_study_excel.py
 
 # PDF source (explicit path)
