@@ -39,13 +39,14 @@ from parse_pdf_reports import parse_treat_par_pdf
 # DICOM-Imports werden lazy geladen (nur wenn --dicom verwendet wird)
 
 # ── Konfiguration ─────────────────────────────────────────────────────────────
-DEFAULT_PDF_DIR = Path(r"C:\Users\Aria\Desktop\testPDF")
+DEFAULT_PDF_DIR  = Path(r"Z:\Projekte_Github\brainlab-srs-analytics\testPDF")
+DEFAULT_DICOM_DIR = Path(r"Z:\Projekte_Github\brainlab-srs-analytics\testDICOM")
 DEFAULT_OUTPUT  = _HERE / "study_export.xlsx"
 
 
 # ── Spalten-Template (exakt wie Master_study.xlsx) ───────────────────────────
 PLAN_COLS = [
-    "Patient ID UKE", "ID LMU", "Alter bei 1. MBM-SRT",
+    "PatID ClinicA", "PatID Clinic", "Alter bei 1. MBM-SRT",
     "Diagnose Code (1=AdenoLunge; 2 Melanom; 3=MammaCa; 4=sonstiges)",
     "Diagnose Freitext", "Diagnosedatum (Primarius)", "Diagnosedatum (BM)",
     "dsGPA-Score", "1. MBM-SRT",
@@ -501,7 +502,7 @@ def main():
     if use_dicom:
         # ── DICOM-Modus ───────────────────────────────────────────────────────
         from create_excel import load_dicom_plans
-        dicom_dir = args.dicom
+        dicom_dir = args.dicom if args.dicom is not None else DEFAULT_DICOM_DIR
         if not dicom_dir.exists():
             print(f"DICOM-Ordner nicht gefunden: {dicom_dir}")
             sys.exit(1)

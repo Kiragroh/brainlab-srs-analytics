@@ -194,12 +194,22 @@ Fills a **study-specific Excel template** (`Master_study.xlsx`) from Brainlab so
 Designed for prospective data collection where each row represents one brain metastasis (BM-Stat layout).
 
 ```bash
-# PDF source (default)
+# PDF source (default – uses DEFAULT_PDF_DIR)
+python fill_study_excel.py
+
+# PDF source (explicit path)
 python fill_study_excel.py --pdf "C:\path\to\PDFs" --out study_export.xlsx
 
-# DICOM source (uses same GTV/margin logic as create_excel.py)
+# DICOM source – pass --dicom to activate; defaults to DEFAULT_DICOM_DIR if no path given
 python fill_study_excel.py --dicom "C:\path\to\DICOMs" --out study_export.xlsx
 ```
+
+Default paths (set at the top of `fill_study_excel.py`):
+
+| Variable | Default value |
+|----------|---------------|
+| `DEFAULT_PDF_DIR` | `Z:\Projekte_Github\brainlab-srs-analytics\testPDF` |
+| `DEFAULT_DICOM_DIR` | `Z:\Projekte_Github\brainlab-srs-analytics\testDICOM` |
 
 Uses the **same parsing methods** as `parse_pdf_reports.py` and `create_excel.py` internally:
 - PDF mode: direct table regex parser (`parse_pdf_tables`) for all three PDF sections (PRESCRIPTION, TREATED METASTASES, OTHERS) + `parse_treat_par_pdf` for plan metadata
