@@ -1,6 +1,6 @@
 """Native Brainlab PlanEval DICOM Parser → data-ptv.csv + data-plan.csv
 
-Benötigt: pydicom, pandas, numpy, tqdm  (kein patools nötig)
+Benötigt: pydicom, pandas, numpy, tqdm
 
 Extrahiert PTV-Level-Daten (eine Zeile pro Target):
   - PTVname, PTVvolume, Max diameter, CI, GI, Sphericity, Convexity
@@ -638,14 +638,8 @@ def get_optimizer(p):
 
 def main():
     base_dir = Path(__file__).parent  # scripts/
-    root_dir = base_dir.parent  # project root
-    # brainlab_dictionary.csv: suche in mehreren Pfaden (patools optional)
-    _dict_candidates = [
-        base_dir / "brainlab_dictionary.csv",
-        root_dir / "patools" / "example_data" / "brainlab_dictionary.csv",
-        root_dir / "brainlab_dictionary.csv",
-    ]
-    dict_csv = next((p for p in _dict_candidates if p.exists()), None)
+    dict_csv_path = base_dir / "brainlab_dictionary.csv"
+    dict_csv = dict_csv_path if dict_csv_path.exists() else None
 
     # Argumente parsen (--debug überschreibt DEBUG_MODE)
     args = sys.argv[1:]

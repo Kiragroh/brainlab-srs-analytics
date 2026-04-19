@@ -79,11 +79,8 @@ def load_dicom_plans(dicom_dir: Path, debug: bool) -> list:
         return []
 
     # Brainlab Dictionary optional registrieren
-    _candidates = [
-        _HERE / "brainlab_dictionary.csv",
-        _HERE.parent / "patools" / "example_data" / "brainlab_dictionary.csv",
-    ]
-    csv_path = next((p for p in _candidates if p.exists()), None)
+    csv_path = _HERE / "brainlab_dictionary.csv"
+    csv_path = csv_path if csv_path.exists() else None
     if csv_path:
         try:
             register_brainlab_private_dict(str(csv_path))
