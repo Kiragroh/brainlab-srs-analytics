@@ -1,0 +1,486 @@
+Tag;Name;Keyword;VR;VM;Retired;Private Creator Code;Defined in;Comment;Item Type;Path
+(0009,[01]-01);Subscription Parameter Sequence;SubscriptionParameterSequence;SQ;1;;Brainlab-S1-SubscriptionParameters;Subscription;(0009,[01]-01) violates the Export Platform Name attribute tag;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-01);Export Platform Name;ExportPlatformName;LO;1;;BrainLAB_Conversion;RT Objects;existed for a long time;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-01);Video Clip URL Sequence;VideoClipURLSequence;SQ;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-02);Subscription Instance UID;SubscriptionInstanceUID;UI;1;;Brainlab-S1-SubscriptionParameters;Subscription;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-02);Video Clip URL;VideoClipURL;LT;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-03);Video ThumbNail URL;Video ThumbNail File URL;LT;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-04);Video Completion Treatment;VideoCompletionTreatment;CS;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-05);Video Clip Series Sequence;VideoClipSeriesSequence;SQ;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-06);Video Clip Series Type;VideoClipSeriesType;CS;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-07);Video Sprite URL Sequence;VideoSpriteURLSequence;SQ;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-08);Video Sprite URL;VideoSpriteURL;LT;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-09);Video VTT URL;VideoVTTURL;LT;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-10);Replaced Instance Sequence;ReplacedInstanceSequence;SQ;1;RET;Brainlab-S9-History;History;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-10);Video VTT Content;VideoVTTContent;UT;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-11);Video Clip Original Size;VideoClipOriginalSize;IS;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-12);Video Recording Date;VideoRecordingDate;DT;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-13);Video Recording Time;VideoRecordingTime;TM;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-20);Attribute Reference Sequence;AttributeReferenceSequence;SQ;1;RET;Brainlab-S9-History;History;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-21);Item Referencing Index;ItemReferencingIndex;UL;1;;Brainlab-S9-History;History;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-22);Predecessor Attribute Reference Sequence;PredecessorAttributeReferenceSequence;SQ;1;RET;Brainlab-S9-History;History;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-23);Current Attribute Reference Sequence;CurrentAttributeReferenceSequence;SQ;1;RET;Brainlab-S9-History;History;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-24);Referenced Item Referencing Index;ReferencedItemReferencingIndex;UL;1;;Brainlab-S9-History;History;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-30);History Information Sequence;HistoryInformationSequence;SQ;1;;Brainlab-S9-History;History;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-31);History Sequence;HistorySequence;SQ;1;;Brainlab-S9-History;History;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-32);Item Sequence;ItemSequence;SQ;1;;Brainlab-S9-History;History;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-33);Item History Sequence;ItemHistorySequence;SQ;1;;Brainlab-S9-History;History;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-34);Data Source Compartment Unavailable Path;DataSourceCompartmentUnavailablePath;LT;1;;Brainlab-Sx-DataSourcesStatusInfo;;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-51);Export Platform Checksum;ExportPlatformChecksum;OB;1;;Brainlab-Conversion;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-52);Query Recursion;QueryRecursion;CS;1;;Brainlab_S70_ReferenceManagementService;Brainlab Reference Service;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-60);Subscription Context Info;SubscriptionContextInfo;LT;1;;Brainlab-S1-SubscriptionParameters;Subscription;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-61);Instance Rating Score;InstanceRatingScore;US;1;;Brainlab_S70_ReferenceManagementService;Brainlab Reference Service;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-62);Instance Rating Date Time;InstanceRatingDateTime;DT;1;;Brainlab_S70_ReferenceManagementService;Brainlab Reference Service;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-63);Instance Active;InstanceActive;CS;1;;Brainlab_S70_ReferenceManagementService;Brainlab Reference Service;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0009,[01]-64);Instance Active Date Time;InstanceActiveDateTime;DT;1;;Brainlab_S70_ReferenceManagementService;Brainlab Reference Service;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-01);Treatment Info Reference Count;TreatmentInfoReferenceCount;IS;1;RET;Brainlab Treatment Info Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-01);GOM Instance Revision;GOMInstanceRevision;UL;1;;Brainlab-S03-General Object Management Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-02);Referenced Planning Type;ReferencedPlanningType;CS;1;RET;Brainlab Treatment Info Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-02);GOM Override Incarnation;GOMOverrideIncarnation;UL;1;;Brainlab-S03-General Object Management Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-03);GOM Blocked Notification Source UID;GOMBlockedNotificationSourceUID;UI;1;;Brainlab-S03-General Object Management Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-03);Treatment Info Procedure Selection;TreatmentInfoProcedureSelection;LO;1;;Brainlab Treatment Info Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-04);Referenced Plan Sequence;ReferencedPlanSequence;SQ;1;;Brainlab Treatment Info Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-05);Referenced Fusion Pairs;ReferencedFusionPairs;SQ;1;;Brainlab Treatment Info Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-06);Unsorted Series Selection;UnsortedSeriesSelection;SQ;1;;Brainlab Treatment Info Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-07);View Orientation for Radiological Application;ViewOrientationForRadiologicalApplications;CS;1;;Brainlab Treatment Info Group;;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-20);Verified Registration Info Sequence;VerifiedRegistrationInfoSequence;SQ;1;;Brainlab Treatment Info Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-21);Verified Registration;VerifiedRegistration;SQ;1;;Brainlab Treatment Info Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-22);Verification Date Time;VerificationDateTime;DT;1;;Brainlab Treatment Info Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0011,[01]-23);Reference Position;ReferencePositiion;FD;16;;Brainlab Treatment Info Group;Whiteboard;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-20);Gantry Position Matrx;Gantry Position Matrix;DS;16;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-30);Frame of Reference Evidence Sequence;FrameOfReferenceEvidenceSequence;SQ;1;;Brainlab-S26-FOREvidence;Diffusion Field;"The Private Creator Code should actually be ""Brainlab-S46-FOREvidence"" to be consistent with the Supplement 46 where the private tag is defined in, however, because of backward compatibility reasons the historic Creator Code was retained. Multiple Def.";Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-30);Calibration Matrix;CalibrationMatrix;DS;16;;Brainlab-S12-Airo;AIRO;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-31);Scanner Marker Points;ScannerMarkerPoints;DS;3*n;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-32);Calibration MD5;CalibrationMD5;LO;1;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-41);Scanner Array Visibility;ScannerArrayVisibility;CS;1;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-42);Patient Array Visibility;PatientArrayVisibility;CS;1;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-45);Patient To Scanner Matrix;PatientToScannerMatrix;DS;16;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-46);Registration Date Time;RegistrationDateTime;DT;1;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-61);Scanner Error Code;ScannerErrorCode;IS;1;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-62);Navigation Error Code;NavigationErrorCode;IS;1;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-A0);Handshake SYN;HandshakeSYN;ST;1;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0021,[01]-A1);Handshake ACK;HandshakeACK;ST;1;;Brainlab-S12-Airo;AIRO;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-10);Image Collection Description Sequence;ImageCollectionDescriptionSequence;SQ;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-20);Image Description Sequence;ImageDescriptionSequence;SQ;1;;Brainlab-S7-Image;Slice Sets;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-20);Shot Info;ShotInfo;CS;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-30);Sort Key;SortKey;UL;1;;Brainlab-S7-Image;Slice Sets;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-30);Treatment Side;TreatmentSide;CS;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-31);Fluoro Kit;FluoroKit;LO;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-40);Sub Modality;SubModality;CS;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-41);Shot Direction;ShotDirection;CS;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-42);Shot Region;ShotRegion;CS;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-50);Functional Data Identification Sequence;FunctionalDataIdentificationSequence;SQ;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-60);Functional Data Identifier;FunctionalDataIdentifier;SQ;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-90);Sorting Rule;SortingRule;LT;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-91);Reinterpret Multiframe Rule;ReinterpretMultiframeRule;LT;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-92);Additional Sorting Settings;AdditionalSortingSettings;SH;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-93);Sorting Rule Sequence;SortingRuleSequence;SQ;1-255;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-94);Reinterpret Multiframe Rule Sequence;ReinterpretMultiframeRuleSequence;SQ;1-255;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-95);Settings Output Sequence;SettingsOutputSequence;SQ;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0027,[01]-96);SortingSettingsMD5;Sorting Settings MD5;LT;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-01);Two D Calibration Sequence;TwoDCalibrationSequence;SQ;1;;Brainlab-S73-2DCalibration;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-10);Minimum Value;MinimumValue;FD;1;RET;Brainlab-S7-Image;Slice Sets;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-10);PET LUT;PETLUTTable;OB;1;;Brainlab-S18-Windowing;Windowing;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-12);External Study Instance UID;ExternalStudyInstanceUID;UI;1;;Brainlab-S18-Windowing;Windowing;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-20);Maximum Value;MaximumValue;FD;1;RET;Brainlab-S7-Image;Slice Sets;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-20);Referenced Auxiliary Series Sequence;ReferencedAuxiliarySeriesSequence;SQ;1;;Brainlab-S18-Windowing;Windowing;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-30);Offset;Offset;UL;1;RET;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-31);Reference Array 1;ReferenceArray1;LO;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-32);Reference Array 2;ReferenceArray2;LO;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-33);Matrix 1;Matrix1;DS;16;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-34);Matrix 2;Matrix2;DS;16;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-35);Reference 1 to Camera Projection;Ref1ToCamera;DS;16;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-36);Reference 2 to Camera Projection;Ref2ToCamera;DS;16;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-37);Image Type;ImageType;CS;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-40);Scale Factor;ScaleFactor;FD;1;RET;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-50);Apply Color Table Inverted;ApplyColorTableInverted;US;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-60);Normalization Offset;NormalizationOffset;FD;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-70);Normalization Scale Factor;NormalizationScaleFactor;FD;1;;Brainlab-S7-Image;Slice Sets;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-80);Modified Source Image Attributes Sequence;ModifiedSourceImageAttributesSequence;SQ;1;;Brainlab_ModifiedSourceImageAttributes;;Introduced with Dicom Proxy 4.0.2 to change shifted CT pixel data back to get resacale intercept to -1024;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0029,[01]-81);Applied Shift On Original Pixel Value;AppliedShiftOnOriginalPixelValue;IS;1;;Brainlab_ModifiedSourceImageAttributes;;Introduced with Dicom Proxy 4.0.2 to change shifted CT pixel data back to get resacale intercept to -1024;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-10);Video ThumbNail Desciption Sequence;VideoThumbNailDescriptionSequence;SQ;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-30);Video Instance Description Sequence;VideoInstanceDescriptionSequence;SQ;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-33);Mirror State;MirrorState;CS;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-34);Image Flipping;ImageFlipping;CS;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-40);Video Clip Collection Bit Rate;VideoClipCollectionBitRate;UL;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-41);Video Clip Collection Duration;VideoClipCollectionDuration;UL;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-42);Video Clip Collection Stream Size;VideoClipCollectionStreamSize;OB;1;;Brainlab-S25-VideoClipCollection;Video Integration Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-50);Structured Data Sequence;StructuredDataSequence;SQ;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-51);Raw Data Sequence;RawDataSequence;SQ;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-52);Structured Data;StructuredData;UT;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-53);Raw Data;RawData;OB;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-54);Raw Data Index;RawDataIndex;US;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-56);Raw Data Size;RawDataSize;UL;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-57);Referenced Raw Data Index;ReferencedRawDataIndex;US;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-58);Structured Data Type;StructuredDataType;CS;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-59);Structured Data Scheme Version;StructuredDataSchemeVersion;LO;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-60);Raw Data Type;RawDataType;CS;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-61);Structured Raw Data Presence Flag;StructuredRawDataPresenceFlag;CS;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-62);Reference Identifier;ReferenceIdentifier;IS;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0031,[01]-63);Structured Raw Data Encoding Type;StructuredRawDataEncodingType;CS;1;;Brainlab-S26-Raw;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0033,[01]-01);Unicode Support Level;UnicodeSupportLevel;IS;1;;Brainlab_UnicodeSupport;;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0033,[01]-31);Projection Matrix;ProjectionMatrix;DS;12;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0033,[01]-32);Projection Parameters;ProjectionParameters;DS;10;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0033,[01]-33);Image Filtered Identifier;ImageFiltered;CS;1;;Brainlab-S32-RegisteredFluoroImage;Fluoro Image Registration Encoding Scheme;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0063,[01]-10);Alternate Segmented Property Type Code Sequence;AlternateSegmentedPropertyTypeCodeSequence;SQ;1;;Brainlab-S32-SO;Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-01);Brainlab Type Code Sequence;BrainlabTypeCodeSequence;SQ;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-01);Two D Measurement Sequence;TwoDMeasurementSequence;SQ;1;;Brainlab-S72-2DMeasurement;Raw Data;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-03);Fractional Anisotropy Values;FractionalAnisotropyValues;OF;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-04);Multi Colored;MultiColored;CS;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-05);Min Max Avg Fractional Anisotropy Value List;MinMaxAvgFractionalAnisotropyValueList;OF;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-06);Min Max Avg Fiber Length Values;MinMaxAvgFiberLengthValues;FL;3;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-07);Fiber Length Values;FiberLengthValues;OF;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-08);Min Max Avg Fractional Anisotropy Values;MinMaxAvgFractionalAnisotropyValues;FL;3;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-12);Device Model Body;DeviceModelBody;ST;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-13);Device Model Diameter;DeviceModelDiameter;FD;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-14);Device Model Tip Length;DeviceModelTipLength;FD;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-15);Device Model Marker;DeviceModelMarker;DS;2-2n;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-16);Device Model Offset;DeviceModelOffset;ST;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-20);Lead Model;LeadModel;SQ;1;;Brainlab-S14-SSO;Surface Segmentation;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-21);Lead Hemisphere;LeadHemisphere;SQ;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-22);Lead Direction;LeadDirection;DS;3;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-23);Lead Implant Date;LeadImplantDate;DT;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-24);Trajectory Context;TrajectoryContext;ST;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-30);Label Position;LabelPosition;FL;3;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-40);Custom Lead Shape Sequence;CustomLeadShapeSequence;SQ;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-41);Ring Section Sequence;RingSectionSequence;SQ;0-n;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-42);Ring Section Index;RingSectionIndex;;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-43);Ring Section Offset;RingSectionOffset;;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-44);Ring Section Length;RingSectionLength;;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-45);Directional Section Sequence;DirectionalSectionSequence;SQ;0-n;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-45);Directional Sections Sequence;DirectionalSectionsSequence;SQ;3;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-46);Directional Section Index;DirectionalSectionIndex;;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-47);Directional Section Offset Angle;DirectionalSectionOffsetAngle;;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-48);Directional Section Length Angle;DirectionalSectionLengthAngle;;1;;Brainlab-S14-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-60);Generic Cage Sequence;GenericCageSequence;SQ;1;;Brainlab-S93-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-61);Angles;Angles;FD;12;;Brainlab-S93-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-62);Banana Radius;BananaRadius;FL;3;;Brainlab-S93-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-63);From Origin To Cage;FromOriginToCage;FD;16;;Brainlab-S93-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-64);Shape;Shape;CS;1;;Brainlab-S93-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0067,[01]-65);Size;Size;FL;3;;Brainlab-S93-SSO;Surface Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0069,[01]-01);BL Segmentation Type;BLSegmentationType;LO;1-n;;Brainlab-S32-SO;Segmentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-10);Reference Code Sequence;ReferenceCodeSequence;SQ;1;;Brainlab-S13-SpatialRegistration;Spatial Registration;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-10);Presentation Sequence;PresentationSequence;SQ;1;;Brainlab-S11-NDPresentationState;nD Presentation;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-10);Content Type Code Sequence;ContentTypeCodeSequence;SQ;1;RET;Brainlab-S15-ContentIdent;Content Identification;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-10);Presentation Input Type;PresentationInputType;CS;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-11);View Layout Name;ViewLayoutName;CS;1;;Brainlab-S28-ViewConfigurationInformation;;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-12);View Objects For Segmentation;ViewObjectsForSegmentation;CS;1;;Brainlab-S28-ViewConfigurationInformation;;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-14);Registration Method Code Sequence;RegistrationMethodCodeSequence;SQ;1;;Brainlab-S13-SpatialRegistration;Spatial Registration;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-16);Registration Accuracy Value;RegistrationAccuracyValue;FD;1;;Brainlab-S13-SpatialRegistration;Spatial Registration;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-18);Registration Result Flags;RegistrationResultFlags;CS;1-n;;Brainlab-S13-SpatialRegistration;Spatial Registration;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-20);Bounding Box Sequence;BoundingBoxSequence;SQ;1;;Brainlab-S13-SpatialRegistration;Spatial Registration;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-20);Crop;Crop;CS;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-20);Cropbox Sequence;CropboxSequence;SQ;1;;Brainlab-S11-NDPresentationState;nD Presentation;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-21);Bounding Box Origin;BoundingBoxOrigin;FD;3;;Brainlab-S13-SpatialRegistration;Spatial Registration;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-21);Volume Cropping Method;VolumeCroppingMethod;CS;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-21);Cropbox Origin;CropboxOrigin;FD;3-3;;Brainlab-S11-NDPresentationState;nD Presentation;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-22);Bounding Box Vectors;BoundingBoxVectors;FD;9;;Brainlab-S13-SpatialRegistration;Spatial Registration;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-22);CropboxVectors;Crop Box Vectors;FD;9-9;;Brainlab-S11-NDPresentationState;nD Presentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-23);Bounding Box Crop Planes;BoundingBoxCropPlanes;FD;6-6;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-30);Threshold Sequence;ThresholdSequence;SQ;1;;Brainlab-S11-NDPresentationState;nD Presentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-31);Threshold Name;ThresholdName;CS;1;;Brainlab-S11-NDPresentationState;nD Presentation;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-31);Multi Planar Reconstruction Style;MultiPlanarReconstructionStyle;CS;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-32);Threshold Value;ThresholdValue;FD;1;;Brainlab-S11-NDPresentationState;nD Presentation;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-32);MPR Thickness Type;MPRThicknessType;CS;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-33);Hardware Removal Enabled;HardwareRemovalEnabled;CS;1;;Brainlab-S11-NDPresentationState;nD Presentation;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-34);MPR Generating Plane;MPRGeneratingPlane;FD;6-6;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-35);MPR Top Left Corner;MPRTopLeftCorner;FD;3-3;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-36);MPR Bottom Right Corner;MPRBottomRightCorner;FD;3-3;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-41);Render Algorithm;RenderAlgorithm;CS;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-42);Render View Projection;RenderViewProjection;CS;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-43);Viewport Look Direction;ViewportLookDirection;FD;3-3;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-44);Viewport Up Direction;ViewportUpDirection;FD;3-3;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-45);Viewport Orthographic Field Of View;ViewportOrthographicFieldOfView;FD;6-6;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-46);3D View Parameter Sequence for VR environment;SmartGlasses3DViewParameterSequence;SQ;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-47);Viewport Position for VR glasses;ViewportVRPosition;FD;3-3;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-48);Viewport Orientation for VR glasses;ViewportVROrientation;DS;16-16;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-49);Viewport Zoom for VR glasses;ViewportVRZoom;FD;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-61);Presentation State Input Sequence;PresentationStateInputSequence;SQ;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-91);Center Position;CenterPosition;FD;3-3;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-92);ThreeD Component Type;ThreeDComponentType;CS;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-93);Min Views;MinViews;UL;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-94);View Tiling;ViewTiling;UL;2-2;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-98);View Layout Views Are Linked;ViewLayoutViewsAreLinked;CS;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0071,[01]-99);View Layout Type;ViewLayoutType;CS;1;;Brainlab-S27-MultiDimensionalPresentationState;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0073,[01]-10);Selector Sequence Item Pointer;SelectorSequenceItemPointer;UL;1;RET;Brainlab-S9-History;History;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0073,[01]-10);Projective Registration Sequence;RegistrationSequence;SQ;1;;Brainlab-S23-ProjectiveFusion;Projective Registration;Multiple Definition of Tag detetected;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0073,[01]-21);Smart View Parameter Sequence;SmartViewParameterSequence;SQ;1;;Brainlab-S27-SmartViewParameter;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0073,[01]-22);Spine MPR Reconstruction Plane Correction;SpineMPRReconstructionPlaneCorrection;SQ;1;;Brainlab-S27-SmartViewParameter;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0073,[01]-23);Initial View Center On Vertebra Position;InitialViewCenterOnVertebraPosition;UL;2-2;;Brainlab-S27-SmartViewParameter;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0073,[01]-24);Smart Approach Slider Position;SmartApproachSliderPos;FD;1;;Brainlab-S27-SmartViewParameter;View Presentation on Extensions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0073,[01]-25);Focus Point;FocusPoint;FD;3-3;;Brainlab-S27-SmartViewParameter;;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0075,[01]-10);Bulk Data Attributes Sequence;BulkDataAttributesSequence;SQ;1;;Brainlab-S20-BulkDataAttributes;Deformable Spatial Registration;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0075,[01]-20);Bulk Data Stripped;BulkDataStripped;CS;1;;Brainlab-S20-BulkDataAttributes;;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-10);Clinical Baseline Class;ClinicalBaselineClass;CS;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-11);Clinical Baseline ID;ClinicalBaselineID;SH;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-12);Clinical Baseline Description;ClinicalBaselineDescription;ST;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-13);Clinical Baseline Name;ClinicalBaselineName;LO;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-20);Reference Property Code Sequence;ReferencePropertyCodeSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-21);Referenced Concept Name Code Sequence;ReferencedConceptNameCodeSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-30);Item State Code Sequence;ItemStateCodeSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-31);Item State Sequence;ItemStateSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-32);Item State DateTime;ItemStateDateTime;DT;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-33);Item State Comment;ItemStateComment;ST;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-34);Item State Source Identification Sequence;ItemStateSourceIdentificationSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-40);Clinical Baseline Intent;ClinicalBaselineIntent;CS;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-42);Disease Location Sequence;DiseaseLocationSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-43);Contributing Algorithm Sequence;ContributingAlgorithmSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-50);Clinical Baseline Referenced Content Types Sequence;ClinicalBaselineReferencedContentTypesSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-51);Application Meta Data;ApplicationMetaData;UT;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-60);Clinical Baseline Icon;ClinicalBaselineIcon;UT;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-80);Clinical Baseline Category Code Sequence;ClinicalBaselineSpecificTypeCodeSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-81);Clinical Baseline Specific Type Code Sequence;ClinicalBaselineSpecificTypePropertiesCodeSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-82);Clinical Baseline Specific Type Properties Code Sequence;PatientTreatmentTypePropertiesCodeSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0077,[01]-90);Clinical Baseline Storage Sequence;ClinicalBaselineStorageSequence;SQ;1;;Brainlab-S42-ClinicalBaseline;Clinical Baseline;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0079,[10]-10);Atlas Variants;AtlasVariants;LO;1-n;;Brainlab-S20-DeformableSpatialRegistration;Deformable Spatial Registration;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0090,0027);StorageTargetBlackList;StorageTargetBlackList;LT;1;;Brainlab-Sx-PrePostProcessing;;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0091,[01]-01);Patient Appearance Sequence;PatientAppearanceSequence;SQ;1-N;;Brainlab-S96-PatientAppearance;Patient Appearance;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0091,[01]-02);Appearance Feature Code Sequence;AppearanceFeatureCodeSequence;SQ;1;;Brainlab-S96-PatientAppearance;Patient Appearance;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0091,[01]-02);Visualization Method Code Sequence;VisualizationMethodCodeSequence;SQ;1;;Brainlab-S96-PatientAppearance;Patient Appearance;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0401,[01)-10);Data Set Compartment Attributes Sequence;DataSetCompartmentAttributesSequence;SQ;1;;Brainlab-S5-DataSetCompartments;;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0401,[01]-20);Data Set Compartment ID;DataSetCompartmentID;LO;1;;Brainlab-S5-DataSetCompartments;;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0431,[01]-10);Timeline Element Sequence;TimelineElementSequence;SQ;1;;Brainlab_S43_PatientFileTimeline;Patient File Timelime and Events;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0431,[01]-20);Timeline Element Type;TimelineElementType;CS;1;;Brainlab_S43_PatientFileTimeline;Patient File Timelime and Events;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0431,[01]-21);Purpose Of Timeline Element Sequence;PurposeOfTimelineElementSequence;SQ;1;;Brainlab_S43_PatientFileTimeline;Patient File Timelime and Events;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0431,[01]-22);Timeline Element Start DateTime;TimelineElementStartDateTime;DT;1;;Brainlab_S43_PatientFileTimeline;Patient File Timelime and Events;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0431,[01]-23);Timeline Element End DateTime;TimelineElementEndDateTime;DT;1;;Brainlab_S43_PatientFileTimeline;Patient File Timelime and Events;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0431,[01]-24);Timeline Element Label;TimelineElementLabel;ST;1;;Brainlab_S43_PatientFileTimeline;Patient File Timelime and Events;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0431,[01]-25);Timeline Element Description;TimelineElementDescription;LT;1;;Brainlab_S43_PatientFileTimeline;Patient File Timelime and Events;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0631,[01]-20);Clinical Event Type Code Sequence;ClinicalEventTypeCodeSequence;SQ;1;;Brainlab-S63-ClinicalEvent;Clinical Event;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0631,[01]-21);Purpose of Clinical Event Sequence;PurposeOfClinicalEventSequence;SQ;1;;Brainlab-S63-ClinicalEvent;Clinical Event;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0631,[01]-22);Clinical Event Start Date Time;ClinicalEventStartDateTime;DT;1;;Brainlab-S63-ClinicalEvent;Clinical Event;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0631,[01]-23);Clinical Event Label;ClinicalEventLabel;ST;1;;Brainlab-S63-ClinicalEvent;Clinical Event;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0631,[01]-24);Clinical Event Description;ClinicalEventDescription;LT;1;;Brainlab-S63-ClinicalEvent;Clinical Event;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(0631,[01]-25);Clinical Event Creator Sequence;ClinicalEventCreatorSequence;SQ;1;;Brainlab-S63-ClinicalEvent;Clinical Event;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3005,[01]-38);Dose Data Source Type;Dose Data Source Type;CS;1;;Brainlab_S65_DoseParameters;Dose Persistence;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3005,[01]-3A);Dose Scope;DoseScope;CS;1;;Brainlab_S65_DoseParameters;Dose Persistence;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3005,[01]-44);Dose Calculation Algorithm Sequence;DoseCalculationAlgorithmSequence;SQ;1;;Brainlab_S65_DoseParameters;Dose Persistence;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3005,[01]-45);Radiation Transport Override Type;RadiationTransportOverrideType;CS;1;;Brainlab_S65_DoseParameters;Dose Persistence;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300B,[01]-01);Beam Modality Sequence;BeamModalitySequence;SQ;1;RET;Brainlab - ONC - Beam Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300B,[01]-10);Referenced Beam List;ReferencedBeamList;IS;1-n;RET;Brainlab - ONC - Beam Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300B,[01]-20);Referenced Beam Index;ReferencedBeamIndex;CS;1;;Brainlab - ONC - Beam Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300B,[01]-30);Maximum Treatment Beam Number Used;MaximumTreatmentBeamNumberUsed;IS;1;;Brainlab_S10_RTObjects;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300B,[01]-31);Maximum Setup Beam Number Used;MaximumSetupBeamNumberUsed;IS;1;;Brainlab_S10_RTObjects;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300B,[01]-32);Export ID Used;ExportIDUsed;IS;1;;Brainlab_S10_RTObjects;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-01);Plan Analytics Parameters UID;PlanAnalyticsParametersUID;UI;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-02);Plan Analytics Parameters State;PlanAnalyticsParametersState;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-03);Plan Analytics Datetime;PlanAnalyticsDatetime;DT;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-10);Clinical Baseline Sequence;ClinicalBaselineSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-12);Optimizer Name;OptimizerName;LO;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-13);Optimizer Version;OptimizerVersion;LO;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-14);Planning DateTime;PlanningDateTime;DT;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-15);Clinical Baseline Approval State;ClinicalBaselineApprovalState;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-20);Plan Data Sequence;PlanDataSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-23);Total PTV Volume;TotalPTVVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-24);Dose Grid Resolution;DoseGridResolution;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-25);Normal Integral Dose;NormalIntegralDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-26);Global Conformity Index;GlobalConformityIndex;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-27);Global Gradient Index;GlobalGradientIndex;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-28);Volume Averaged Conformity Index;VolumeAveragedConformityIndex;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-29);Volume Averaged Gradient Index;VolumeAveragedGradientIndex;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-2A);Is Primary Dose Algorithm Selected;IsPrimaryDoseAlgoSelected;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-2B);Global Index Geometric Object Definition Index;GlobalIndexGeometricObjectDefinitionIndex;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-30);Treatment Group Sequence;TreatmentGroupSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-33);Isocenter Dose;IsocenterDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-34);Modulation Complexity Score;ModulationComplexityScore;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-36);Arc Efficiency Score;ArcEfficiencyScore;FL;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-35);Number of Table Angles;NumberOfTableAngles;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-37);Isocenter Localization;IsocenterLocalization;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-38);Isocenter Localization Geometric Object Definition Index;IsocenterLocalizationGeometricObjectDefinitionIndex;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-39);Isocenter Prescription;IsocenterPrescription;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-3A);Monte Carlo Variance;MonteCarloVariance;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-3B);Monte Carlo Resolution;MonteCarloResolution;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-3C);Monte Carlo Result Type;MonteCarloResultType;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-40);Target Volume Sequence;TargetVolumeSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-41);Target Volume Index;TargetVolumeIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-42);Referenced Target Volume Indices;ReferencedTargetVolumeIndices;US;1-n;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-43);Target Volume Type;TargetVolumeType;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-44);Conformity Index;ConformityIndex;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-45);Gradient Index;GradientIndex;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-46);Target Ring Size;TargetRingSize;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-47);D95 Percent Value;D95PercentValue;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-48);PTV Margin;PTVMargin;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-49);Closest Target Volume Distance;ClosestTargetVolumeDistance;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-4A);Target Volume to Isocenter Distance;TargetVolumetoIsocenterDistance;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-4B);Source Target Volume Index;SourceTargetVolumeIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-4C);Fractionation Total Dose;FractionationTotalDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-4D);Boost Sequence;BoostSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-4E);Target Localization;TargetLocalization;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-4F);Target Localization Geometric Object Definition Index;TargetLocalizationGeometricObjectDefinitionIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-50);OAR Or Other Object Sequence;OAROrOtherObjectSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-51);OAR Or Other Object Index;OAROrOtherObjectIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-52);Referenced OAR Or Other Object Indices;ReferencedOAROrOtherObjectIndices;US;1-n;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-53);Most Important OAR Flag;MostImportantOARFlag;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-54);DVH Points Sequence;DVHPointsSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-55);DVH Point Type;DVHPointType;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-56);DVH Point Dose;DVHPointDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-57);DVH Point Volume;DVHPointVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-58);Actual Dose;ActualDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-60);Geometric Object Definition Sequence;GeometricObjectDefinitionSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-61);Geometric Object Definition Index;GeometricObjectDefinitionIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-62);Referenced Geometric Object Definition Index;ReferencedGeometricObjectDefinitionIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-63);Geometric Object Type;GeometricObjectType;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-64);Absolute Volume DVH;AbsoluteVolumeDVH;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-65);Absolute Volume VoxelObject;AbsoluteVolumeVoxelObject;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-66);Macdonald Criteria;Macdonald Criteria;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-67);RECIST Value;RECISTValue;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-68);Margin Dose Volume;MarginDoseVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-69);Half Margin Dose Volume;HalfMarginDoseVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-70);Vx Sequence;VxSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-71);Volume Dose;VolumeDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-72);Dose Volume;DoseVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-73);Shared Vx Flag;SharedVxFlag;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-74);Vx Volume Type;VxVolumeType;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-75);Vx Normal Tissue Type;VxNormalTissueType;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-76);Base Volme Geometric Object Definition Index;BaseVolmeGeometricObjectDefinitionIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-78);Normal Tissue Policy;NormalTissuePolicy;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-80);Treatment Machine Sequence;TreatmentMachineSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-81);Treatment Machine Index;TreatmentMachineIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-82);Referenced Treatment Machine Index;ReferencedTreatmentMachineIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-83);Blocking Device Name;BlockingDeviceName;LO;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-84);Number of Leaves;NumberofLeaves;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-85);Dynamic Jaws Flag;DynamicJawsFlag;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-86);Dynamic Jaws Tracking Flag;DynamicJawsTrackingFlag;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-87);Unique Leaf Thicknesses;UniqueLeafThicknesses;FD;1-n;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-88);Machine Profile UID;MachineProfileUID;UI;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-89);Cone Manufacturer;ConeManufacturer;LO;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-8A);Multi-Leaf Collimator Geometry Identifier;MLCGeometryIdentifier;ST;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-8B);Machine Profile Version;MachineProfileVersion;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-8C);Machine Profile Base;MachineProfileBase;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-8D);Radiologic Shift Static;RadiologicShiftStatic;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-8E);Radiologic Shift Dynamic;RadiologicShiftDynamic;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-8F);Radiologic Shift VMAT;RadiologicShiftVMAT;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-90);Treatment Element Sequence;TreatmentElementSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-91);Gantry Start Angle;GantryStartAngle;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-92);Gantry Stop Angle;GantryStopAngle;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-93);Gantry Overall Span Angle;GantryOverallSpanAngle;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-94);Gantry Control Point Span Angle;GantryControlPointSpanAngle;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-95);Cone Diameter;ConeDiameter;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-96);BEV Margins;BEVMargins;FD;1-n;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-97);Geometric Depth From Patient Surface;GeometricDepthFromPatientSurface;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-98);Pencil Beam Kernel Grid Size;PencilBeamKernelGridSize;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-99);Arc Resolution Factor;ArcResolutionFactor;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-9A);Pencil Beam Equivalent Field Size;PencilBeamEquivalentFieldSize;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-9B);Isocenter Radiologic Depth;IsocenterRadiologicDepth;FD;3;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-9C);Arc Complexity Scores;ArcComplexityScores;FD;4;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-9E);Radiologic Shift Tongue and Groove;RadiologicShiftTAG;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-A0);Normalization Parameters Sequence;NormalizationParametersSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-A1);Coverage Dose;CoverageDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-A2);Coverage Volume;CoverageVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-A3);Maximum Dose Constraint Dose;MaximumDoseConstraintDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-A4);Maximum Dose Constraint Volume;MaximumDoseConstraintVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-A5);Actual Dose for Dose Constraint Volume;ActualDoseForDoseConstraintVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-A6);Tolerated Volume;ToleratedVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-A7);Actual Dose for Tolerated Volume;ActualDoseForToleratedVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-A8);SRS Prescription Mode;SRSPrescriptionMode;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-A9);Maximum Dose Relation;MaximumDoseRelation;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-AA);Actual Dose for Coverage Volume;ActualDoseForCoverageVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-AB);Actual Volume for Coverage Dose;ActualVolumeforCoverageDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-B0);DVH Data Sequence;DVHDataSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-B1);Volume Bins;VolumeBins;FD;1-n;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-B2);D01 Percent Value;D01PercentValue;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-B3);D02 Percent Value;D02PercentValue;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-B4);D98 Percent Value;D98PercentValue;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-B5);D99 Percent Value;D99PercentValue;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-B6);D50 Percent Value;D50PercentValue;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-B7);D05 Percent Value;D05PercentValue;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-C1);Voxel Object Relationship Sequence;VoxelObjectRelationshipSequence;SQ;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-C2);Source Voxel Object Index;SourceVoxelObjectIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-C3);Target Voxel Object Index;TargetVoxelObjectIndex;US;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-C4);Minimum Distance;MinimumDistance;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-C5);Overlap Volume;OverlapVolume;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-C6);Overlap Mode;OverlapMode;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-C7);Convexity;Convexity;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-C8);Sphericity;Sphericity;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-C9);Midpoint Dose;MidpointDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-CA);Grid Size DVH;GridSizeDVH;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-CB);Minimum Dose Between Centers Of Mass;MinimumDoseBetweenCentersOfMass;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-CC);Machine Name;Machine Name;LO;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-D0);Machine Profile Energy Modality;MachineProfileEnergyModality;SH;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-D1);Near Min Dose;NearMinDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-D2);Near Max Dose;NearMaxDose;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-E0);MLC Minimum Radiological Aperture;MLCMinRadAperture;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-E1);Energy Parameter Name;EnergyParameterName;LO;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-E2);Primary Algo Dose Calibration;PrimaryAlgoDoseCalibration;FD;4;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-E3);MC Dose Calibration;MCDoseCalibration;FD;5 or 9;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-E4);MC radiological field: light field offset;MCRadField_lightFieldOffset;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-E5);MC radiological field: light field offset;MCRadField_widthTongueGroove;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-E6);ASG PB Radiologic Shift Dynamic leaf shift;ASGPBRadiologicShiftDynLS;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-E7);ASG PB Radiologic Shift Tongue and Groove;ASGPBRadiologicShiftTAG;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-E8);ASG MC radiological field: light field offset;ASGMCRadField_lightFieldOffset;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-E9);ASG MC radiological field: width tongue groove;AGMCRadField_widthTongueGroove;FD;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-EA);PB uses Scatter Model;PBUsesScatterModel;CS;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-EB);Dose Rate List;DoseRateList;FD;1-255;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[79]-EC);Dynamic Mode;DynamicMode;SH;1;;Brainlab_S79_PlanAnalyticsData;Plan Analytics Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300D,[92]-01);Plan Analytics Plot Data Points Sequence;PlanAnalyticsPlotDataPointsSequence;SQ;1;;Brainlab_S82_PlanAnalyticsPlotData;Plan Analytics Plot Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300F,[82]-03);Plot Data Local Vx Dose;PlotDataLocalVxDose;FD;1;;Brainlab_S82_PlanAnalyticsPlotData;Plan Analytics Plot Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300F,[82]-04);Plot Data Local Vx;PlotDataLocalVx;FD;1;;Brainlab_S82_PlanAnalyticsPlotData;Plan Analytics Plot Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300F,[82]-05);Plot Data Global Vx Dose;PlotDataGlobalVxDose;FD;1;;Brainlab_S82_PlanAnalyticsPlotData;Plan Analytics Plot Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300F,[82]-06);Plot Data Global Vx;PlotDataGlobalVx;FD;1;;Brainlab_S82_PlanAnalyticsPlotData;Plan Analytics Plot Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300F,[82]-10);Number of PTVs;NumberofPTVs;FD;1;;Brainlab_S82_PlanAnalyticsPlotData;Plan Analytics Plot Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(300F,[82]-11);Prescription Weighted PTV Volume;PrescriptionWeightedPTVVolume;FD;1;;Brainlab_S82_PlanAnalyticsPlotData;Plan Analytics Plot Parameters;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(310B,[01]-01);Meta Beam Sequence;MetaBeamSequence;SQ;1;RET;Brainlab - ONC - Meta-Beam Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(310B,[01]-10);Meta Beam Name;MetaBeamName;LO;1;RET;Brainlab - ONC - Meta-Beam Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(310B,[01]-11);Meta Beam Number;MetaBeamNumber;IS;1;RET;Brainlab - ONC - Meta-Beam Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3147,1204);Dose Histogram Data;DoseHistogramData;OF;1;;DICOM WG-07 Supplement 147 - Block 12;RT Objects;see the DICOM WG-07 White Paper on encoding private attributes of Supplement 147;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3147,1301);Conceptual Volume UID;ConceptualVolumeUID;UI;1;;DICOM WG-07 Supplement 147 - Block 13;RT Objects;see the DICOM WG-07 White Paper on encoding private attributes of Supplement 147;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3147,1305);Equivalent Conceptual Volumes Sequence;EquivalentConceptualVolumesSequence;SQ;1;;DICOM WG-07 Supplement 147 - Block 13;RT Objects;see the DICOM WG-07 White Paper on encoding private attributes of Supplement 147;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3147,1331);Segmentation SOP Instance Reference Sequence;SegmentationSOPInstanceReferenceSequence;SQ;1;;DICOM WG-07 Supplement 147 - Block 13;RT Objects;see the DICOM WG-07 White Paper on encoding private attributes of Supplement 147;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3147,1343);Direct Segment Reference Sequence;DirectSegmentReferenceSequence;SQ;1;;DICOM WG-07 Supplement 147 - Block 13;RT Objects;see the DICOM WG-07 White Paper on encoding private attributes of Supplement 147;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3147,1347);Direct Segment Reference Index;DirectSegmentReferenceIndex;US;1;;DICOM WG-07 Supplement 147 - Block 13;RT Objects;see the DICOM WG-07 White Paper on encoding private attributes of Supplement 147;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3147,1348);Referenced Direct Segment Reference Index;ReferencedDirectSegmentReferenceIndex;US;1;;DICOM WG-07 Supplement 147 - Block 13;RT Objects;see the DICOM WG-07 White Paper on encoding private attributes of Supplement 147;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3147,1352);RT Segment Annotation Sequence;RTSegmentAnnotationSequence;SQ;1;;DICOM WG-07 Supplement 147 - Block 13;RT Objects;see the DICOM WG-07 White Paper on encoding private attributes of Supplement 147;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3147,9121);RT Segment Annotation Index;RTSegmentAnnotationIndex;US;1;;DICOM WG-07 Supplement 147 - Block 91;RT Objects;see the DICOM WG-07 White Paper on encoding private attributes of Supplement 147;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(320B,[01]-01);Dynamic Tracking;DynamicTracking;CS;1;RET;Brainlab - ONC - Multi-axial Treatment Machine;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(320B,[01]-02);Gantry Head Pitch Angle;GantryHeadPitchAngle;FD;1;RET;Brainlab - ONC - Multi-axial Treatment Machine;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(320B,[01]-03);Gantry Head Pitch Rotation Direction;GantryHeadPitchRotationDirection;CS;1;RET;Brainlab - ONC - Multi-axial Treatment Machine;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(320B,[01]-04);Gantry Head Roll Angle;GantryHeadRollAngle;FD;1;RET;Brainlab - ONC - Multi-axial Treatment Machine;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(320B,[01]-05);Gantry Head Roll Rotation Direction;GantryHeadRollRotationDirection;CS;1;RET;Brainlab - ONC - Multi-axial Treatment Machine;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3243,[01]-09);Beam Secondary Name;BeamSecondaryName;SH;1;;Varian Medical Systems VISION 3243;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3249,[01]-00);Maximum Treatment Time;MaximumTreatmentTime;DS;1;;Varian Medical Systems VISION 3249;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3249,[01]-10);Referenced Primary Dose Reference UID;ReferencedPrimaryDoseReferenceUID;UI;1;;Varian Medical Systems VISION 3249;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3253,[01]-00);Extended Interface Data;ExtendedInterfaceData;OB;1;;Varian Medical Systems VISION 3253;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3253,[01]-01);Extended Interface Length;ExtendedInterfaceLength;IS;1;;Varian Medical Systems VISION 3253;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(3253,[01]-02);Extended Interface Format;ExtendedInterfaceFormat;LO;1;;Varian Medical Systems VISION 3253;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(330B,[01]-01);Hybrid Arc Parameter Sequence;HybridArcParameterSequence;SQ;1;RET;Brainlab - ONC - Hybrid-Arc Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(330B,[01]-10);Arc-Beam Relation;ArcBeamRelation;DS;1;RET;Brainlab - ONC - Hybrid-Arc Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(330B,[01]-11);Desired Dose Weighting;DesiredDoseWeighting;DS;1;RET;Brainlab - ONC - Hybrid-Arc Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(330B,[01]-12);PTV Margin;PTVMargin;DS;1;RET;Brainlab - ONC - Hybrid-Arc Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(330B,[01]-13);OAR Margin;OARMargin;DS;1;RET;Brainlab - ONC - Hybrid-Arc Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(330B,[01]-21);Beam Limiting Device Angle IMRT;BeamLimitingDeviceAngleIMRT;DS;1;RET;Brainlab - ONC - Hybrid-Arc Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(330B,[01]-22);Beam Limiting Device Angle Arc;BeamLimitingDeviceAngleArc;DS;1;RET;Brainlab - ONC - Hybrid-Arc Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-10);Treatment Event Sequence;TreatmentEventSequence;SQ;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-11);Quentry Session ID;QuentrySessionID;ST;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-12);Treatment Type;TreatmentType;CS;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-13);Event Date;EventDate;DT;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-14);Quentry Patient ID;QuentryPatientID;UL;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-15);Dose Evaluation Content Type;DoseEvaluationContentType;CS;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-16);Examination Type;ExaminationType;CS;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-17);Treatment Sub-Type;TreatmentSubType;CS;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-18);Quentry Account Sequence;QuentryAccountSequence;SQ;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-19);Quentry Account ID;QuentryAccountID;ST;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-20);Software Sequence;SoftwareSequence;SQ;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-30);Treatment Device Sequence;TreatmentDeviceSequence;SQ;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-32);Treatment Device Type;TreatmentDeviceType;CS;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-33);Leaf Sizes;LeafSizes;FL;1-n;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-40);Planning Sequence;PlanningSequence;SQ;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-51);Direct Segment Reference Absence Reason;DirectSegmentReferenceAbsenceReason;CS;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-52);Macdonald Criteria;MacdonaldCriteria;FL;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-53);Macdonald Diameters;MacdonaldDiameters;FL;2;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-54);RECIST Value;RECISTValue;FL;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-60);Dosimetric Parameters Sequence;DosimetricParametersSequence;SQ;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-61);Dosimetric Parameters Index;DosimetricParametersIndex;US;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-62);Margin Dose 99 Percent;MarginDose99Percent;FL;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-63);Referenced Dosimetric Parameters Index;ReferencedDosimetricParametersIndex;US;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-64);Margin Dose Volume;MarginDoseVolume;FL;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-65);Average Margin;AverageMargin;FL;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-66);Half Margin Dose Volume;HalfMarginDoseVolume;FL;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-67);Referenced PTV Segment Index;ReferencedPTVSegmentIndex;US;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-68);Diagnosis System ID;DiagnosisSystemID;LO;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-69);Location System ID;LocationSystemID;LO;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-70);Direct Segment Reference Presence Flag;DirectSegmentReferencePresenceFlag;CS;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-71);Segmentation Instance Index;SegmentationInstanceIndex;US;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-72);Referenced Segmentation Instance Index;ReferencedSegmentationInstanceIndex;US;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(340B,[01]-80);Dose Evaluation Presence Flag;DoseEvaluationPresenceFlag;CS;1;RET;Brainlab - ONC - Dose Evaluation Parameters;RT Objects;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(6401,[01]-10);SOP Instance Reference Connector Sequence;SOPInstanceReferenceConnectorSequence;SQ;1;;Brainlab-S64-SelectorRef;Macro Definitions;;Item;teams/DICOM/Lists/Brainlab Private Attributes
+(6401,[01]-20);Property Sequence;PropertySequence;SQ;1;;Brainlab-S64-SelectorRef;Brainlab Reference Service;;Item;teams/DICOM/Lists/Brainlab Private Attributes

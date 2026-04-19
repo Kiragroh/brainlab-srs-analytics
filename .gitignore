@@ -1,5 +1,6 @@
 # ── Patientendaten & Ausgaben (NIEMALS einchecken) ───────────────────────────
 *.csv
+!brainlab_dictionary.csv
 *.xlsx
 *.xls
 
