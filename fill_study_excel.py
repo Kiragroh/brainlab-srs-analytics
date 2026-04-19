@@ -489,8 +489,8 @@ def main():
     )
     parser.add_argument("--pdf",   type=Path, default=None,
                         help="Ordner mit Brainlab TreatPar PDFs (Standard-Quelle)")
-    parser.add_argument("--dicom", type=Path, default=None,
-                        help="Ordner mit Brainlab PlanAnalytics DICOMs (Alternative zu --pdf)")
+    parser.add_argument("--dicom", type=Path, nargs="?", const=DEFAULT_DICOM_DIR, default=None,
+                        help="Ordner mit Brainlab PlanAnalytics DICOMs (Alternative zu --pdf); ohne Pfad wird DEFAULT_DICOM_DIR verwendet")
     parser.add_argument("--out",   type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
 

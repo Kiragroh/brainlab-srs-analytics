@@ -195,7 +195,10 @@ python fill_study_excel.py
 # PDF source (explicit path)
 python fill_study_excel.py --pdf "C:\path\to\PDFs" --out study_export.xlsx
 
-# DICOM source – pass --dicom to activate; defaults to DEFAULT_DICOM_DIR if no path given
+# DICOM source (default – uses DEFAULT_DICOM_DIR)
+python fill_study_excel.py --dicom
+
+# DICOM source (explicit path)
 python fill_study_excel.py --dicom "C:\path\to\DICOMs" --out study_export.xlsx
 ```
 
@@ -282,6 +285,8 @@ Changes to `config.py` affect **both** DICOM and PDF parsers automatically. No n
 | **Debug** (`--debug`) | All IDs except 9-digit | Test/research plans |
 
 Set `DEBUG_MODE = True` in the script for a persistent default.
+
+> **The digit count (default: 9) can be changed in `config.py`** — adjust `PATIENT_ID_DIGITS` there to match your institution's patient ID length.
 
 ---
 
