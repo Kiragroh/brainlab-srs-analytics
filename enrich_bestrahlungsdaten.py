@@ -733,6 +733,7 @@ def main():
         ch_dmax, ch_d005, ch_d003 = extract_oar_metrics(p["oar_data"], chiasm_name)
         bs_dmax, bs_d005, bs_d003 = extract_oar_metrics(p["oar_data"], bs_name)
 
+        struct_map = p.get("struct_map", {})
         for ptv in p["ptv_details"]:
             vol = ptv["PTVvolume"]
             if vol is not None and vol < 0.4:
@@ -743,6 +744,15 @@ def main():
                 vg = "big(>1cc)"
             else:
                 vg = "unknown"
+
+            # GTV inline berechnen
+            ptv_vol_mm3 = vol * 1000 if vol is not None else None
+            gtv_name, _gtv_exp, gtv_vol_mm3 = find_gtv_for_ptv(
+                ptv["PTVname"], struct_map, ptv_vol_mm3)
+            gtv_vol_cc  = round(gtv_vol_mm3 / 1000, 4) if gtv_vol_mm3 is not None else None
+            margin_mm   = compute_margin_mm(ptv_vol_mm3, gtv_vol_mm3)
+            margin_int  = int(round(margin_mm)) if margin_mm is not None else None
+            show_gtv    = margin_mm is not None and margin_mm <= 6
 
             row = {
                 "Patient Id": pid,
@@ -772,6 +782,9 @@ def main():
                 "Local V12Gy": ptv["Local V12Gy"],
                 "Local V18Gy": ptv["Local V18Gy"],
                 "Max dose relation": ptv.get("Max dose relation"),
+                "GTVname": gtv_name if show_gtv else None,
+                "GTVvolume_cc": gtv_vol_cc if show_gtv else None,
+                "Margin_mm_int": margin_int if show_gtv else None,
                 "Creation": creation,
                 "VolumeGroup": vg,
                 "ApprovalStatus": p["approval_status"],

@@ -195,6 +195,14 @@ def build_dicom_dfs(plans: list):
         for ptv in p["ptv_details"]:
             ptv_vol_cc  = ptv["PTVvolume"]
             ptv_vol_mm3 = ptv_vol_cc * 1000 if ptv_vol_cc is not None else None
+
+            gtv_name, gtv_expected, gtv_vol_mm3 = find_gtv_for_ptv(
+                ptv["PTVname"], struct_map, ptv_vol_mm3)
+            gtv_vol_cc = round(gtv_vol_mm3 / 1000, 4) if gtv_vol_mm3 is not None else None
+            margin     = compute_margin_mm(ptv_vol_mm3, gtv_vol_mm3)
+            margin_int = int(round(margin)) if margin is not None else None
+            show_gtv   = margin is not None and margin <= 6
+
             ptv_rows.append({
                 "Source": "DICOM",
                 "Patient Id": pid, "Patient name": pname, "Plan name": plan_name,
@@ -213,6 +221,9 @@ def build_dicom_dfs(plans: list):
                 "Local V5Gy": ptv.get("Local V5Gy"), "Local V10Gy": ptv.get("Local V10Gy"),
                 "Local V12Gy": ptv.get("Local V12Gy"), "Local V18Gy": ptv.get("Local V18Gy"),
                 "Max dose relation": ptv.get("Max dose relation"),
+                "GTVname": gtv_name if show_gtv else None,
+                "GTVvolume_cc": gtv_vol_cc if show_gtv else None,
+                "Margin_mm_int": margin_int if show_gtv else None,
                 "VolumeGroup": _volume_group(ptv_vol_cc),
                 "ApprovalStatus": p["approval_status"],
                 "ApplicationVersion": p["application_version"],
@@ -221,16 +232,12 @@ def build_dicom_dfs(plans: list):
                 "Brainstem_Name": bs_name or "", "Brainstem_Dmax_Gy": bs_dmax,
             })
 
-            gtv_name, gtv_expected, gtv_vol_mm3 = find_gtv_for_ptv(
-                ptv["PTVname"], struct_map, ptv_vol_mm3)
-            gtv_vol_cc = round(gtv_vol_mm3 / 1000, 4) if gtv_vol_mm3 is not None else None
-            margin     = compute_margin_mm(ptv_vol_mm3, gtv_vol_mm3)
             gtv_rows.append({
                 "Patient Id": pid, "Plan name": plan_name,
                 "PTVname": ptv["PTVname"], "PTVvolume_cc": ptv_vol_cc,
                 "GTV_expected": gtv_expected, "GTVname": gtv_name or "",
                 "GTVvolume_cc": gtv_vol_cc, "Margin_mm": margin,
-                "Margin_mm_int": int(round(margin)) if margin is not None else None,
+                "Margin_mm_int": margin_int,
             })
 
     return (pd.DataFrame(plan_rows), pd.DataFrame(ptv_rows), pd.DataFrame(gtv_rows))

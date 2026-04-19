@@ -213,9 +213,23 @@ def merge_ptv_level(df_base=None):
     if df_extra is None:
         print("Keine PTV-Daten gefunden!")
         return None
-    
+
     df_extra['Data_Source'] = df_extra['_source'].fillna('unknown')
     df_extra = df_extra.drop(columns=[c for c in df_extra.columns if c.startswith('_')])
+
+    # GTV-Spalten ergänzen (falls nicht bereits aus DICOM-CSV vorhanden)
+    if 'GTVname' not in df_extra.columns:
+        df_gtv_src = load_csv_safe(DICOM_GTV)
+        if df_gtv_src is not None:
+            if 'Margin_mm_int' not in df_gtv_src.columns and 'Margin_mm' in df_gtv_src.columns:
+                df_gtv_src['Margin_mm_int'] = df_gtv_src['Margin_mm'].apply(
+                    lambda v: int(round(v)) if pd.notna(v) else None)
+            gtv_sel = df_gtv_src[df_gtv_src['Margin_mm'].apply(
+                lambda v: pd.notna(v) and v <= 6)][
+                ['Patient Id', 'Plan name', 'PTVname', 'GTVname', 'GTVvolume_cc', 'Margin_mm_int']
+            ].copy()
+            df_extra = df_extra.merge(
+                gtv_sel, on=['Patient Id', 'Plan name', 'PTVname'], how='left')
     
     # Plan ID + Namen aus Excel-Basis einfügen
     if df_base is not None and 'Plan ID' in df_base.columns:
