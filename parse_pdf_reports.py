@@ -140,16 +140,18 @@ def parse_prescription_section(all_text):
                     if re.fullmatch(r'[\d.]+', lk):
                         nums.append(float(lk))
                     k += 1
-                if len(nums) >= 7:
+                if len(nums) >= 6:
                     name = " ".join(name_lines)
-                    # cols: dose_per_fx, n_fractions, presc_dose, cov_dose, cov_vol_pct, vol_cc, size_cm
+                    # v1.5: 6 Werte → dose_fx, n_fx, presc_dose, presc_vol%, volume, size
+                    # v2.0+: 7 Werte → dose_fx, n_fx, presc_dose, cov_dose, cov_vol%, volume, size
+                    is_v15_presc = len(nums) == 6
                     ptv_list.append({
                         "PTVname": name,
-                        "Prescribed dose": nums[2] if len(nums) > 2 else nums[0],
+                        "Prescribed dose": nums[2],
                         "Number of fractions": int(nums[1]) if len(nums) > 1 else None,
-                        "PTVvolume": nums[5] if len(nums) > 5 else None,
-                        "Max diameter": nums[6] if len(nums) > 6 else None,
-                        "Prescribed coverage": nums[4] / 100.0 if len(nums) > 4 else None,
+                        "PTVvolume": nums[4] if is_v15_presc else (nums[5] if len(nums) > 5 else None),
+                        "Max diameter": nums[5] if is_v15_presc else (nums[6] if len(nums) > 6 else None),
+                        "Prescribed coverage": nums[3] / 100.0 if is_v15_presc else (nums[4] / 100.0 if len(nums) > 4 else None),
                     })
                     i = k
                     continue
@@ -636,7 +638,121 @@ def parse_header(all_text, filename_pid, filename_plan):
 
 
 # ---------------------------------------------------------------------------
-# 9) OAR-Namen matchen
+# 9) Direkte Tabellen-Anreicherung (versions-unabhängig)
+# ---------------------------------------------------------------------------
+
+def _enrich_ptv_from_tables(filepath, ptv_map):
+    """Korrigiert/ergänzt Dosisfelder in ptv_map direkt aus PDF-Tabellen.
+
+    Behebt falsche Feld-Zuordnungen des heuristischen Parsers für v1.5/v2.0.
+    Schreibt: min_dose, max_dose, mean_dose, coverage_dose, PTVvolume,
+              local_v12, max_dose_rel in jeden PTV-Eintrag.
+    """
+    try:
+        import pymupdf as fitz
+        doc = fitz.open(str(filepath))
+        txt = "\n".join(norm_text(p.get_text()) for p in doc)
+        doc.close()
+    except Exception:
+        return
+
+    treated_pos = txt.find('TREATED METASTASES')
+    if treated_pos == -1:
+        return
+    treated = txt[treated_pos:]
+
+    # Versions-Erkennung innerhalb TREATED METASTASES
+    is_v15 = bool(re.search(r'PTV\w+\nPTV\n[\d\.]+\n[\d\.]+\n[\d\.]+\n[\d\.]+\n[\d\.]+\n[\d\.]+\n[\d\.]+', treated))
+    is_v45 = bool(re.search(r'\n[\d\.]+ D[\d\.]+ % = [\d\.]+\n', treated))
+
+    def _f(s):
+        try: return float(s)
+        except Exception: return None
+
+    if is_v15:
+        # v1.5: PTV{N}\nPTV\n{vol}\n{max}\n{mean}\n{min}\n{CI}\n{GI}\n{maxrel}
+        for m in re.finditer(
+            r'(PTV\w+)\nPTV\n'
+            r'([\d\.]+)\n([\d\.]+)\n([\d\.]+)\n([\d\.]+)\n'
+            r'[\d\.]+\n[\d\.]+\n([\d\.]+)',
+            treated
+        ):
+            key = m.group(1)
+            patch = {
+                '_ptv_vol_direct': _f(m.group(2)),
+                '_max_dose':  _f(m.group(3)),
+                '_mean_dose_direct': _f(m.group(4)),
+                '_min_dose':  _f(m.group(5)),
+                '_max_dose_rel': _f(m.group(6)),
+            }
+            # Matche gegen ptv_map (fuzzy)
+            for ptv_name, ptv in ptv_map.items():
+                if re.sub(r'\s+', '', ptv_name).lower().startswith(
+                        re.sub(r'\s+', '', key).lower()):
+                    ptv['_coverage_dose'] = None          # kein echter D98% in v1.5
+                    ptv['_mean_dose']     = patch['_mean_dose_direct']
+                    ptv['_nearmax_dose']  = patch['_max_dose']   # Max = nearmax in v1.5
+                    ptv['_min_dose']      = patch['_min_dose']
+                    ptv['_max_dose_rel']  = patch['_max_dose_rel']
+                    if ptv.get('PTVvolume') is None:
+                        ptv['PTVvolume']  = patch['_ptv_vol_direct']
+                    break
+
+    elif is_v45:
+        # v4.5+: {PTV}\n{min} D{x}%={cov}\nV...\n{mean}\nD1%={d}\n{max}\n{CI}\n{GI}\n{lv}\n{mdr}
+        for ptv_name, ptv in ptv_map.items():
+            first = ptv_name.strip().split()[0]
+            pos = treated.find(first)
+            if pos == -1:
+                continue
+            block = treated[pos:pos + 600]
+            m = re.search(
+                r'([\d\.]+)\s+D[\d\.]+ % = ([\d\.]+)\n'
+                r'V [\d\.]+Gy = [\d\.]+\n'
+                r'([\d\.]+)\n'
+                r'D[\d\.]+ % = [\d\.]+\n'
+                r'([\d\.]+)\n'
+                r'[\d\.]+\n[\d\.]+\n'
+                r'([\d\.]+)\n'
+                r'([\d\.]+)',
+                block
+            )
+            if m:
+                ptv['_min_dose']     = _f(m.group(1))
+                ptv['_coverage_dose']= _f(m.group(2))
+                ptv['_mean_dose']    = _f(m.group(3))
+                ptv['_nearmax_dose'] = _f(m.group(4))   # D1% = near-max
+                ptv['_local_v_cc']   = _f(m.group(5))
+                ptv['_max_dose_rel'] = _f(m.group(6))
+
+    else:
+        # v2.0: {PTV}\n{min}\nD{x}%={cov}\n{mean}\nDMax={mc}\n{max}\n{CI}\n{GI}\n{mdr}
+        for ptv_name, ptv in ptv_map.items():
+            first = ptv_name.strip().split()[0]
+            pos = treated.find(first)
+            if pos == -1:
+                continue
+            block = treated[pos:pos + 500]
+            m = re.search(
+                r'([\d\.]+)\n'
+                r'D[\d\.]+ % = ([\d\.]+)\n'
+                r'([\d\.]+)\n'
+                r'DMax = [\d\.]+\n'
+                r'([\d\.]+)\n'
+                r'[\d\.]+\n[\d\.]+\n'
+                r'([\d\.]+)',
+                block
+            )
+            if m:
+                ptv['_min_dose']     = _f(m.group(1))
+                ptv['_coverage_dose']= _f(m.group(2))
+                ptv['_mean_dose']    = _f(m.group(3))
+                ptv['_nearmax_dose'] = _f(m.group(4))   # Max = nearmax in v2.0
+                ptv['_max_dose_rel'] = _f(m.group(5))
+
+
+# ---------------------------------------------------------------------------
+# OAR-Namen matchen
 # ---------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------
@@ -793,6 +909,9 @@ def parse_treat_par_pdf(filepath):
             m = re.search(r'/\s*(\d+)\s*fx', hdr.get("description", ""), re.IGNORECASE)
             if m:
                 fractions = int(m.group(1))
+
+    # --- Direkte Tabellen-Korrektur (Dosisfelder versions-unabhängig) ---
+    _enrich_ptv_from_tables(filepath, ptv_map)
 
     # MCS aus Plan Analysis
     if mcs is None:
