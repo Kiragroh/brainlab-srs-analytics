@@ -97,17 +97,21 @@ python parse_pdf_reports.py --debug     # include test/research plans
 
 **Output:** `pdf_data_plan.csv`, `pdf_data_ptv.csv`
 
-#### ⚠️ PDF Version Limitation
-The Brainlab Treatment Report format has changed significantly across Elements versions. This parser is optimized for **versions 3.x and 4.x**. Older versions use a different document layout that the regex-based extraction cannot fully handle:
+#### PDF Version Support
+The Brainlab Treatment Report format has changed significantly across Elements versions.
+The parser now uses **version-aware direct table parsing** for all known formats:
 
 | PDF Version | Completeness | Notes |
 |-------------|-------------|-------|
-| **4.x** | ~90–100% | Best support |
+| **4.x** | ~90–100% | Best support; min+coverage on single line, LocalV12 column |
 | **3.x** | ~87–95% | Good support |
-| **2.x** (~2015–2018) | ~75% | Different column order in TARGETS section → Local V12Gy / Max Dose Relation often missing |
-| **1.x** (very old) | ~33–74% | No structured TARGETS layout → most per-PTV fields empty |
+| **2.x** | ~75% | `D98% =` / `DMax =` inline format, multi-line PTV names handled |
+| **1.5.x** | ~74% | `PTV\nPTV\n` type-marker format; PRESCRIPTION and dose fields now correctly indexed |
 
+Version is auto-detected from the document structure (no manual configuration needed).
 The completeness table printed after each run shows exact numbers for your data.
+
+> **CranialSRS vs. MultiMets:** Both optimizers share the same table structure and are supported. Current testing focused on the MultiMets optimizer; similar completeness improvements for older CranialSRS versions are in progress.
 
 ---
 
@@ -118,6 +122,8 @@ Use `create_excel.py` instead if you don't have this file.
 ```bash
 python merge_excel.py
 ```
+
+**Auto-generates missing CSVs:** If `dicom_data_*.csv` or `pdf_data_*.csv` do not exist yet, `merge_excel.py` automatically runs `enrich_bestrahlungsdaten.py` and/or `parse_pdf_reports.py` first (using their configured default paths). Existing CSVs are never re-created — delete them manually to force a refresh.
 
 **Output:** `Bestrahlungsdaten_merged.xlsx` (Plan / PTV / GTV sheets)
 
@@ -137,6 +143,39 @@ The master Excel is your institutional patient/plan list. It must contain at min
 Additional clinical columns (ICD code, diagnosis, date of treatment, etc.) are preserved as-is in the Plan sheet output.
 
 **Merge key:** `Patient ID + Total MU` — more robust than plan name matching, since plan names often differ between Eclipse and Brainlab.
+
+---
+
+### `fill_study_excel.py`
+Fills a **study-specific Excel template** (`Master_study.xlsx`) from Brainlab source data.
+Designed for prospective data collection where each row represents one brain metastasis (BM-Stat layout).
+
+```bash
+# PDF source (default)
+python fill_study_excel.py --pdf "C:\path\to\PDFs" --out study_export.xlsx
+
+# DICOM source (uses same GTV/margin logic as create_excel.py)
+python fill_study_excel.py --dicom "C:\path\to\DICOMs" --out study_export.xlsx
+```
+
+Uses the **same parsing methods** as `parse_pdf_reports.py` and `create_excel.py` internally:
+- PDF mode: direct table regex parser (`parse_pdf_tables`) for all three PDF sections (PRESCRIPTION, TREATED METASTASES, OTHERS) + `parse_treat_par_pdf` for plan metadata
+- DICOM mode: `load_dicom_plans` + `find_gtv_for_ptv` / `compute_margin_mm` from the DICOM pipeline
+
+| Field | PDF source | DICOM source |
+|-------|-----------|-------------|
+| TotalDose | PRESCRIPTION table | `Prescribed dose` |
+| PTV-Volumen | PRESCRIPTION table | `PTVvolume` |
+| PTV-D98% | Min Dose (TREATED MET) | `Actual dose for prescribed coverage` |
+| PTV-D50% | Mean Dose (TREATED MET) | — *(not in DICOM PTV dict)* |
+| PTV-D2% | Max Dose (TREATED MET) | — *(not in DICOM PTV dict)* |
+| PTV-Coverage | Max Dose Relation % | `Actual coverage for prescription dose` |
+| PTV-CI / GI | TREATED MET | DICOM CI / GI |
+| local-V12Gy | TREATED MET (v4.x+) | `Local V12Gy` |
+| GTV-Volumen | OTHERS table | GTV via P→G naming |
+| PTV-Margin | sphere formula (r_PTV−r_GTV)×10 | sphere formula |
+
+**Output:** `study_export.xlsx` with one sheet (`Studie`), one row per plan + one row per PTV.
 
 ---
 
@@ -191,12 +230,15 @@ Set `DEBUG_MODE = True` in the script for a persistent default.
 scripts/
 ├── create_excel.py              # Standalone export (start here)
 ├── enrich_bestrahlungsdaten.py  # DICOM parser
-├── parse_pdf_reports.py         # PDF parser
-├── merge_excel.py               # Advanced merge (requires master Excel)
+├── parse_pdf_reports.py         # PDF parser (multi-version: 1.5 / 2.0 / 3.x / 4.x)
+├── merge_excel.py               # Advanced merge (requires master Excel; auto-creates CSVs)
+├── fill_study_excel.py          # Fills study-specific Excel template (PDF or DICOM source)
 ├── brainlab_dictionary.csv      # Brainlab private DICOM tag definitions
 ├── README.md
 └── .gitignore
 ```
+
+> Files starting with `_` (e.g. `_test_something.py`) are local helper/test scripts excluded from this repository via `.gitignore`.
 
 ---
 

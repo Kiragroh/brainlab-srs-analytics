@@ -10,6 +10,9 @@
 _TestDICOM/
 _TestPDF/
 
+# ── Lokale Hilfs-/Testskripte (nicht ins Repo) ───────────────────────────────
+_*.py
+
 # ── Python ───────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]

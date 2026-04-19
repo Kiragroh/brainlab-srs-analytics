@@ -9,6 +9,8 @@ Output: Bestrahlungsdaten_merged.xlsx mit 2 Sheets:
   - PTV: PTV-Level Merge
 """
 
+import sys
+import subprocess
 import pandas as pd
 import numpy as np
 from pathlib import Path
@@ -24,6 +26,34 @@ DICOM_GTV = SCRIPT_DIR / "dicom_data_gtv.csv"
 PDF_PLAN = SCRIPT_DIR / "pdf_data_plan.csv"
 PDF_PTV = SCRIPT_DIR / "pdf_data_ptv.csv"
 OUTPUT_EXCEL = SCRIPT_DIR / "Bestrahlungsdaten_merged.xlsx"
+
+
+def ensure_csvs():
+    """Erstellt fehlende CSVs automatisch durch Aufruf der Parser-Skripte.
+
+    - dicom_data_*.csv fehlt → enrich_bestrahlungsdaten.py ausführen
+    - pdf_data_*.csv fehlt   → parse_pdf_reports.py ausführen
+    Nutzt die in den Skripten konfigurierten Standardpfade (REAL_PDF_DIR etc.).
+    Vorhandene CSVs werden nicht neu erzeugt.
+    """
+    dicom_missing = not DICOM_PLAN.exists() or not DICOM_PTV.exists()
+    pdf_missing   = not PDF_PLAN.exists()   or not PDF_PTV.exists()
+
+    if dicom_missing:
+        script = SCRIPT_DIR / "enrich_bestrahlungsdaten.py"
+        if script.exists():
+            print("  DICOM-CSVs fehlen → starte enrich_bestrahlungsdaten.py ...")
+            subprocess.run([sys.executable, str(script)], check=False)
+        else:
+            print(f"  WARNUNG: {script.name} nicht gefunden, DICOM-CSVs werden übersprungen.")
+
+    if pdf_missing:
+        script = SCRIPT_DIR / "parse_pdf_reports.py"
+        if script.exists():
+            print("  PDF-CSVs fehlen → starte parse_pdf_reports.py ...")
+            subprocess.run([sys.executable, str(script)], check=False)
+        else:
+            print(f"  WARNUNG: {script.name} nicht gefunden, PDF-CSVs werden übersprungen.")
 
 
 def load_csv_safe(path, fallback=None):
@@ -269,7 +299,10 @@ def main():
     print("=" * 60)
     print("Excel Merge: Bestrahlungsdaten + DICOM/PDF")
     print("=" * 60)
-    
+
+    # CSVs erzeugen falls fehlend
+    ensure_csvs()
+
     # Plan-Level
     df_plan = merge_plan_level()
     
