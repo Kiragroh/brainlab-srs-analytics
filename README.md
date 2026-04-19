@@ -1,16 +1,57 @@
-# Brainlab SRS Analytics – Export Scripts
+<div align="center">
+
+# 🧠 Brainlab SRS Analytics – Export Scripts
+
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Brainlab Elements](https://img.shields.io/badge/Brainlab-Elements%201.5–4.5-orange)](https://www.brainlab.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-Kiragroh%2Fbrainlab--srs--analytics-lightgrey?logo=github)](https://github.com/Kiragroh/brainlab-srs-analytics)
 
 Python scripts to extract plan quality metrics from **Brainlab Elements** stereotactic radiosurgery data and export them to Excel for statistical analysis.
+
+</div>
 
 Supports three data sources – use what you have:
 
 | Scenario | What you need |
 |----------|--------------|
 | **DICOM only** | Brainlab Elements PlanAnalytics exports (`.dcm`) |
-| **PDF only** | Brainlab Elements Treatment Reports (`.pdf`) |
+| **PDF only** | Brainlab Elements Treatment Reports — **TreatPar** variant (`.pdf`) |
 | **DICOM + PDF** | Both – DICOM is preferred, PDF fills gaps |
 
 > **Data privacy:** All patient data, DICOM files, PDFs, CSVs and Excel outputs are excluded from this repository via `.gitignore`. You must provide your own source files.
+
+---
+
+## Where to Find Your Source Files
+
+### DICOM – PlanAnalytics exports
+
+Brainlab Elements stores PlanAnalytics DICOM files on the **planning server** in its archive.
+The relevant files follow this path pattern:
+
+```
+fileRef(Archive-ElementsPDG)/**/PlanEval*/**/*.dcm
+```
+
+In practice (Windows UNC path example):
+```
+\\<PlanningServer>\Archive-ElementsPDG\<Patient>\PlanEval_<PlanName>\<date>\*.dcm
+```
+
+Copy or map the archive root to a local/network folder and pass it as `--dicom`. The scripts walk all subdirectories recursively, so pointing them at the archive root is sufficient.
+
+### PDF – Treatment Reports (TreatPar)
+
+Brainlab Elements generates a PDF report automatically after each plan is finalised.
+Reports are collected in a **central report output folder** configured in the Elements system settings.
+
+> ⚠️ **Use only the `TreatPar` (Treatment Parameters) report variant.**  
+> Elements also produces `DVH`, `TreatPlan`, and other report types in the same folder.  
+> Only `TreatPar` PDFs contain the PRESCRIPTION, TREATED METASTASES and OTHERS tables that the parser reads.  
+> Files are typically named: `Lastname^Firstname.PatientID.PlanName.TreatPar.pdf`
+
+Pass the root of that report folder as `--pdf`. Subfolders are scanned recursively; non-TreatPar files are silently ignored (they don't match the expected table structure).
 
 ---
 
