@@ -108,7 +108,7 @@ Parses Brainlab PlanAnalytics DICOM files. Produces intermediate CSVs.
 - **OAR (Chiasm / Brainstem):** Dmax, D0.05cc, D0.03cc from DVH
 
 ```bash
-python enrich_bestrahlungsdaten.py             # live mode (9-digit IDs)
+python enrich_bestrahlungsdaten.py             # live mode (9-digit IDs - change this in config if needed)
 python enrich_bestrahlungsdaten.py --debug     # include test/research plans
 ```
 
@@ -171,7 +171,7 @@ The master Excel is your institutional patient/plan list. It must contain at min
 
 | Column | Description | Used for |
 |--------|-------------|---------|
-| `Patient ID` | Patient identifier (9-digit numeric) | Merge key |
+| `Patient ID` | Patient identifier (9-digit numeric - default number) | Merge key |
 | `TotalMU` or `Monitor units` | Total monitor units of the plan | Merge key (matched with DICOM/PDF MU) |
 | `Plan Name` | Brainlab plan name | Used to look up Plan ID in PTV/GTV sheets |
 | `Plan ID` | Institutional plan identifier (e.g. Eclipse ID) | Added to PTV + GTV sheets |
@@ -281,7 +281,7 @@ Changes to `config.py` affect **both** DICOM and PDF parsers automatically. No n
 
 | Mode | Filter | Purpose |
 |------|--------|---------|
-| **Live** (default) | 9-digit numeric IDs only | Production patient data |
+| **Live** (default) | 9-digit numeric IDs only (default number) | Production patient data |
 | **Debug** (`--debug`) | All IDs except 9-digit | Test/research plans |
 
 Set `DEBUG_MODE = True` in the script for a persistent default.
