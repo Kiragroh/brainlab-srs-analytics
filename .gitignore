@@ -1,0 +1,27 @@
+# ── Patientendaten & Ausgaben (NIEMALS einchecken) ───────────────────────────
+*.csv
+*.xlsx
+*.xls
+
+# ── Brainlab Quelldaten (selbst bereitstellen) ───────────────────────────────
+*.dcm
+*.pdf
+_TestDICOM/
+_TestPDF/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.ipynb_checkpoints/
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
