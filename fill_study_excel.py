@@ -106,11 +106,40 @@ def _to_float(s):
         return None
 
 
+def _extract_target_numbers(text: str) -> list[int]:
+    if not text:
+        return []
+    patterns = [
+        r"(?:^|[\s_(/-])PTV[^0-9]{0,20}([0-9]+(?:\+[0-9]+)*)\b",
+        r"(?:^|[\s_(/-])GTV[^0-9]{0,20}([0-9]+(?:\+[0-9]+)*)\b",
+        r"(?:^|[\s_(/-])Tumor[^0-9]{0,20}([0-9]+(?:\+[0-9]+)*)\b",
+        r"(?:^|[\s_(/-])Metastase[^0-9]{0,20}([0-9]+(?:\+[0-9]+)*)\b",
+        r"(?:^|[\s_(/-])Met[^0-9]{0,20}([0-9]+(?:\+[0-9]+)*)\b",
+    ]
+    found = []
+    for pattern in patterns:
+        for match in re.finditer(pattern, str(text), flags=re.IGNORECASE):
+            for part in match.group(1).split("+"):
+                value = int(part)
+                if value not in found:
+                    found.append(value)
+    return found
+
+
+def _infer_margin_from_name(text: str):
+    if not text:
+        return None
+    matches = re.findall(r"(\d+(?:[.,]\d+)?)\s*mm", str(text), flags=re.IGNORECASE)
+    if not matches:
+        return None
+    return max(float(item.replace(",", ".")) for item in matches)
+
+
 def _gtv_from_ptv(ptv_name: str) -> str:
     """GTV-Name: Nummer aus PTV extrahieren → Met{N}.
     PTV1 → Met1,  PTV1 PTV → Met1,  PTV2 xyz → Met2"""
-    m = re.search(r'(\d+)', str(ptv_name))
-    return f"Met{m.group(1)}" if m else ""
+    numbers = _extract_target_numbers(ptv_name)
+    return f"Met {numbers[0]:02d}" if numbers else ""
 
 
 # ── Direkte PDF-Tabellen-Parser ───────────────────────────────────────────────
@@ -310,6 +339,48 @@ def parse_pdf_tables(pdf_path: str) -> dict:
                     'gtv_min_dose':  None,
                 }
 
+        # Fallback fuer alternative OTHERS-Bezeichnungen wie "Tumor 01"
+        # oder weitere GTV-/Met-Varianten.
+        lines = [ln.strip() for ln in others_text.splitlines() if ln.strip()]
+        for idx, line in enumerate(lines):
+            if not re.match(r'^(?:GTV|Met(?:astase)?|Tumor)\b', line, flags=re.IGNORECASE):
+                continue
+            if idx + 4 >= len(lines) or lines[idx + 1] != "ORGAN":
+                continue
+
+            values = []
+            for probe in lines[idx + 2: idx + 8]:
+                if re.fullmatch(r'[\d.]+', probe):
+                    values.append(_to_float(probe))
+                elif probe == "-":
+                    continue
+                else:
+                    break
+
+            numbers = _extract_target_numbers(line)
+            if not numbers or len(values) < 3:
+                continue
+            num = numbers[0]
+            if num in gtv_by_num:
+                continue
+
+            if len(values) >= 4:
+                gtv_by_num[num] = {
+                    'gtv_name':      line,
+                    'gtv_vol_cc':    values[0],
+                    'gtv_max_dose':  values[1],
+                    'gtv_mean_dose': values[2],
+                    'gtv_min_dose':  values[3],
+                }
+            else:
+                gtv_by_num[num] = {
+                    'gtv_name':      line,
+                    'gtv_vol_cc':    values[0],
+                    'gtv_mean_dose': values[1],
+                    'gtv_max_dose':  values[2],
+                    'gtv_min_dose':  None,
+                }
+
     result['_gtv_by_num'] = gtv_by_num
     return result
 
@@ -382,8 +453,11 @@ def make_met_rows(p: dict, pdf_path: str) -> list:
         if gi  is None: gi  = ptv_d.get("GI")
         # D2%: Max Dose; Fallback: _nearmax_dose aus parse_pdf
         d2  = max_dose  if max_dose  is not None else ptv_d.get("_nearmax_dose")
-        # D98%: Min Dose; kein sinnvoller Fallback
-        d98 = min_dose
+        # D98%: in MultiMets 2.0 steht der robuste Wert oft als Coverage Dose
+        # (z.B. "D98.0 % = 19.15"); sonst auf Min Dose zurueckfallen.
+        d98 = data.get("coverage_dose")
+        if d98 is None:
+            d98 = min_dose
         # D50%: Mean Dose; Fallback: _mean_dose aus parse_pdf
         d50 = mean_dose if mean_dose is not None else ptv_d.get("_mean_dose")
 
@@ -397,8 +471,8 @@ def make_met_rows(p: dict, pdf_path: str) -> list:
 
         # ── GTV aus OTHERS-Tabelle ────────────────────────────────────────────
         gtv_by_num = tbl.get("_gtv_by_num", {})
-        ptv_num_m  = re.search(r'(\d+)', short)
-        gtv_data   = gtv_by_num.get(int(ptv_num_m.group(1))) if ptv_num_m else None
+        ptv_numbers = _extract_target_numbers(ptv_name) or _extract_target_numbers(short)
+        gtv_data   = gtv_by_num.get(ptv_numbers[0]) if ptv_numbers else None
 
         if gtv_data:
             gtv_name   = gtv_data['gtv_name']
@@ -408,7 +482,10 @@ def make_met_rows(p: dict, pdf_path: str) -> list:
             row["BM-Stat:\nGTV-D98% [Gy]\n(near min)"] = gtv_data['gtv_min_dose']
             row["BM-Stat:\nGTV-D50% [Gy]\n"]         = gtv_data['gtv_mean_dose']
             # Margin aus Kugelformel (V in cm³, Ergebnis in mm)
-            if ptv_vol is not None and gtv_vol is not None and gtv_vol > 0:
+            explicit_margin = _infer_margin_from_name(ptv_name)
+            if explicit_margin is not None:
+                row["**BM-Stat:\nPTV-Margin [mm]"] = round(explicit_margin, 1)
+            elif ptv_vol is not None and gtv_vol is not None and gtv_vol > 0:
                 r_ptv = (3 * ptv_vol / (4 * math.pi)) ** (1/3)
                 r_gtv = (3 * gtv_vol / (4 * math.pi)) ** (1/3)
                 margin_mm = (r_ptv - r_gtv) * 10  # cm → mm
